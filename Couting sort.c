@@ -88,6 +88,7 @@ int CountingSort(int n, int A[]){
 	for (i = 0; i < n; i++){
 		A[i] = B[i];	
 	}
+	return 0;
 }
 
 

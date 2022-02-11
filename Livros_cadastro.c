@@ -52,4 +52,5 @@ int main (void){
 			printf ("O livro com o maior valor e %s, que custa R$ %2.f", Livro[i].Titulo, Livro[i].Valor);
 		}
 	}
+	return 0;
 }

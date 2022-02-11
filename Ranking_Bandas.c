@@ -22,4 +22,5 @@ int main (void){
 		scanf ("%i", &Bandas[i].Ranking);
 		system ("cls");
 	}
+	return 0;
 }

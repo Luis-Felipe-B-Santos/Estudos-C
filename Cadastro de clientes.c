@@ -65,4 +65,5 @@ int main (void){
 		system ("pause");
 		system ("cls");
 	}
+	return 0;
 }
