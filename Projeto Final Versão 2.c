@@ -8,207 +8,207 @@ void resultado (FILE* ponteiro, char nome[], int TOTVI, int TOTAU, int TOTCI, in
 
 int main (void) 
 { 
-int TOTVI, TOTDI, TOTAU, TOTCI;
-int i, NroFrase, cinestesico, auditivo, visual, digital;
-char NOME[100], PRONTUARIO[100], FileName[100], frase[100], item_1[100], item_2[100], item_3[100], item_4[100];
-char op, col1[20], col2[20], col3[20], col4[20], col5[20], col6[20], col7[20], col8[20], col9[20], col10[20];
-
-printf ("\n DIGITE SEU NOME \t :  ");
-fflush (stdin); // limpa o buffer do teclado
-gets (NOME); // recebe a string que for digitada
-printf ("\n DIGITE SEU PRONTUARIO \t :  ");
-fflush (stdin);
-gets (PRONTUARIO); 
-if (strcmp(NOME,"MASTER") == 0)
-{do {
-	system ("CLS");
-	printf("==================================================== \n");
-	printf("\t TESTE DOS SISTEMAS REPRESENTACIONAIS \n");
-	printf("====================================================\n");
-	printf("\t 1. Cadastrar questionario \n");
-	printf("\t 2. Visualizar questionario \n");
-	printf("\t 3. Realizar teste \n");
-	printf("\t 4. Sobre o teste \n");
-	printf("\t F. Fim \n");
-	printf("====================================================\n");
-	printf("\t Escolha -> ");
-	op = getch ();
-	if (op == '1'){
+	int TOTVI, TOTDI, TOTAU, TOTCI;
+	int i, NroFrase, cinestesico, auditivo, visual, digital;
+	char NOME[100], PRONTUARIO[100], FileName[100], frase[100], item_1[100], item_2[100], item_3[100], item_4[100];
+	char op, col1[20], col2[20], col3[20], col4[20], col5[20], col6[20], col7[20], col8[20], col9[20], col10[20];
+	
+	printf ("\n DIGITE SEU NOME \t :  ");
+	fflush (stdin); // limpa o buffer do teclado
+	gets (NOME); // recebe a string que for digitada
+	printf ("\n DIGITE SEU PRONTUARIO \t :  ");
+	fflush (stdin);
+	gets (PRONTUARIO); 
+	if (strcmp(NOME,"MASTER") == 0){
+		do {
 			system ("CLS");
-			FILE *ponteiro3;
-			ponteiro3 = fopen ("TESTE_SISTEMA_REPRESENTACIONAL.DAT", "w");
-			if (ponteiro3 == NULL){
-				printf ("Erro na abertura do arquivo");
-			}
-			else{
-				printf ("Arquivo aberto com sucesso\n");
-			}
-			printf ("Qual e o nome da coluna 1? \n");
-			scanf  ("%s", &col1);
-			printf ("Qual e o nome da coluna 2? \n");
-			scanf  ("%s", &col2);	
-			printf ("Qual e o nome da coluna 3? \n");
-			scanf  ("%s", &col3);	
-			printf ("Qual e o nome da coluna 4? \n");
-			scanf  ("%s", &col4);	
-			printf ("Qual e o nome da coluna 5? \n");
-			scanf  ("%s", &col5);	
-			printf ("Qual e o nome da coluna 6? \n");
-			scanf  ("%s", &col6);	
-			printf ("Qual e o nome da coluna 7? \n");
-			scanf  ("%s", &col7);	
-			printf ("Qual e o nome da coluna 8? \n");
-			scanf  ("%s", &col8);	
-			printf ("Qual e o nome da coluna 9? \n");
-			scanf  ("%s", &col9);	
-			printf ("Qual e o nome da coluna 10? \n");
-			scanf  ("%s", &col10);				
-			system ("cls");
-			fprintf (ponteiro3, "%-9s%-50s%-12s%-63s%-9s%-53s%-7s%-57s%-8s%-68s\n", col1, col2, col3, col4, col5, col6, col7, col8, col9, col10);
-			{printf ("Quais sao os itens da linha 1? \n");
-			printf ("%s: ", col1);
-			scanf  ("%i", &NroFrase);
-			printf ("\n%s: ", col2);
-			fflush (stdin);
-			gets   (frase); 
-			printf ("\n%s: ", col3);
-			scanf  ("%i", &cinestesico);
-			printf ("\n%s: ", col4);
-			fflush (stdin);
-			gets   (item_1);
-			printf ("\n%s: ", col5);
-			scanf  ("%i", &auditivo);
-			printf ("\n%s: ", col6);
-			fflush (stdin);
-			gets   (item_2);
-			printf ("\n%s: ", col7);
-			scanf  ("%i", &visual);
-			printf ("\n%s: ", col8);
-			fflush (stdin);
-			gets   (item_3);
-			printf ("\n%s: ", col9);
-			scanf  ("%i", &digital);
-			printf ("\n%s: ", col10);
-			fflush (stdin);
-			gets   (item_4);
-			system ("cls");
-			fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
-			{printf ("Quais sao os itens da linha 2? \n");
-			printf ("\n%s: ", col1);
-			scanf  ("%i", &NroFrase);
-			printf ("\n%s: ", col2);
-			fflush (stdin);
-			gets   (frase); 
-			printf ("\n%s: ", col3);
-			scanf  ("%i", &cinestesico);
-			printf ("\n%s: ", col4);
-			fflush (stdin);
-			gets   (item_1);
-			printf ("\n%s: ", col5);
-			scanf  ("%i", &auditivo);
-			printf ("\n%s: ", col6);
-			fflush (stdin);
-			gets   (item_2);
-			printf ("\n%s: ", col7);
-			scanf  ("%i", &visual);
-			printf ("\n%s: ", col8);
-			fflush (stdin);
-			gets   (item_3);
-			printf ("\n%s: ", col9);
-			scanf  ("%i", &digital);
-			printf ("\n%s: ", col10);
-			fflush (stdin);
-			gets   (item_4);
-			system ("cls");
-			fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
-			{printf ("Quais sao os itens da linha 3? \n");
-			printf ("\n%s: ", col1);
-			scanf  ("%i", &NroFrase);
-			printf ("\n%s: ", col2);
-			fflush (stdin);
-			gets   (frase); 
-			printf ("\n%s: ", col3);
-			scanf  ("%i", &cinestesico);
-			printf ("\n%s: ", col4);
-			fflush (stdin);
-			gets   (item_1);
-			printf ("\n%s: ", col5);
-			scanf  ("%i", &auditivo);
-			printf ("\n%s: ", col6);
-			fflush (stdin);
-			gets   (item_2);
-			printf ("\n%s: ", col7);
-			scanf  ("%i", &visual);
-			printf ("\n%s: ", col8);
-			fflush (stdin);
-			gets   (item_3);
-			printf ("\n%s: ", col9);
-			scanf  ("%i", &digital);
-			printf ("\n%s: ", col10);
-			fflush (stdin);
-			gets   (item_4);
-			system ("cls");
-			fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
-			{printf ("Quais sao os itens da linha 4? \n");
-			printf ("\n%s: ", col1);
-			scanf  ("%i", &NroFrase);
-			printf ("\n%s: ", col2);
-			fflush (stdin);
-			gets   (frase); 
-			printf ("\n%s: ", col3);
-			scanf  ("%i", &cinestesico);
-			printf ("\n%s: ", col4);
-			fflush (stdin);
-			gets   (item_1);
-			printf ("\n%s: ", col5);
-			scanf  ("%i", &auditivo);
-			printf ("\n%s: ", col6);
-			fflush (stdin);
-			gets   (item_2);
-			printf ("\n%s: ", col7);
-			scanf  ("%i", &visual);
-			printf ("\n%s: ", col8);
-			fflush (stdin);
-			gets   (item_3);
-			printf ("\n%s: ", col9);
-			scanf  ("%i", &digital);
-			printf ("\n%s: ", col10);
-			fflush (stdin);
-			gets   (item_4);
-			system ("cls");
-			fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
-			{printf ("Quais sao os itens da linha 5? \n");
-			printf ("\n%s: ", col1);
-			scanf  ("%i", &NroFrase);
-			printf ("\n%s: ", col2);
-			fflush (stdin);
-			gets   (frase); 
-			printf ("\n%s: ", col3);
-			scanf  ("%i", &cinestesico);
-			printf ("\n%s: ", col4);
-			fflush (stdin);
-			gets   (item_1);
-			printf ("\n%s: ", col5);
-			scanf  ("%i", &auditivo);
-			printf ("\n%s: ", col6);
-			fflush (stdin);
-			gets   (item_2);
-			printf ("\n%s: ", col7);
-			scanf  ("%i", &visual);
-			printf ("\n%s: ", col8);
-			fflush (stdin);
-			gets   (item_3);
-			printf ("\n%s: ", col9);
-			scanf  ("%i", &digital);
-			printf ("\n%s: ", col10);
-			fflush (stdin);
-			gets   (item_4);
-			system ("cls");
-			fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
-			fclose (ponteiro3);
-			//criar a tabela e gerar o arquivo dat
-			//retornar ao menu
-			system ("pause");
+			printf("==================================================== \n");
+			printf("\t TESTE DOS SISTEMAS REPRESENTACIONAIS \n");
+			printf("====================================================\n");
+			printf("\t 1. Cadastrar questionario \n");
+			printf("\t 2. Visualizar questionario \n");
+			printf("\t 3. Realizar teste \n");
+			printf("\t 4. Sobre o teste \n");
+			printf("\t F. Fim \n");
+			printf("====================================================\n");
+			printf("\t Escolha -> ");
+			op = getch ();
+			if (op == '1'){
+				system ("CLS");
+				FILE *ponteiro3;
+				ponteiro3 = fopen ("TESTE_SISTEMA_REPRESENTACIONAL.DAT", "w");
+				if (ponteiro3 == NULL){
+					printf ("Erro na abertura do arquivo");
+				}
+				else{
+					printf ("Arquivo aberto com sucesso\n");
+				}
+				printf ("Qual e o nome da coluna 1? \n");
+				scanf  ("%s", &col1);
+				printf ("Qual e o nome da coluna 2? \n");
+				scanf  ("%s", &col2);	
+				printf ("Qual e o nome da coluna 3? \n");
+				scanf  ("%s", &col3);	
+				printf ("Qual e o nome da coluna 4? \n");
+				scanf  ("%s", &col4);	
+				printf ("Qual e o nome da coluna 5? \n");
+				scanf  ("%s", &col5);	
+				printf ("Qual e o nome da coluna 6? \n");
+				scanf  ("%s", &col6);	
+				printf ("Qual e o nome da coluna 7? \n");
+				scanf  ("%s", &col7);	
+				printf ("Qual e o nome da coluna 8? \n");
+				scanf  ("%s", &col8);	
+				printf ("Qual e o nome da coluna 9? \n");
+				scanf  ("%s", &col9);	
+				printf ("Qual e o nome da coluna 10? \n");
+				scanf  ("%s", &col10);				
+				system ("cls");
+				fprintf (ponteiro3, "%-9s%-50s%-12s%-63s%-9s%-53s%-7s%-57s%-8s%-68s\n", col1, col2, col3, col4, col5, col6, col7, col8, col9, col10);
+				{printf ("Quais sao os itens da linha 1? \n");
+				printf ("%s: ", col1);
+				scanf  ("%i", &NroFrase);
+				printf ("\n%s: ", col2);
+				fflush (stdin);
+				gets   (frase); 
+				printf ("\n%s: ", col3);
+				scanf  ("%i", &cinestesico);
+				printf ("\n%s: ", col4);
+				fflush (stdin);
+				gets   (item_1);
+				printf ("\n%s: ", col5);
+				scanf  ("%i", &auditivo);
+				printf ("\n%s: ", col6);
+				fflush (stdin);
+				gets   (item_2);
+				printf ("\n%s: ", col7);
+				scanf  ("%i", &visual);
+				printf ("\n%s: ", col8);
+				fflush (stdin);
+				gets   (item_3);
+				printf ("\n%s: ", col9);
+				scanf  ("%i", &digital);
+				printf ("\n%s: ", col10);
+				fflush (stdin);
+				gets   (item_4);
+				system ("cls");
+				fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
+				{printf ("Quais sao os itens da linha 2? \n");
+				printf ("\n%s: ", col1);
+				scanf  ("%i", &NroFrase);
+				printf ("\n%s: ", col2);
+				fflush (stdin);
+				gets   (frase); 
+				printf ("\n%s: ", col3);
+				scanf  ("%i", &cinestesico);
+				printf ("\n%s: ", col4);
+				fflush (stdin);
+				gets   (item_1);
+				printf ("\n%s: ", col5);
+				scanf  ("%i", &auditivo);
+				printf ("\n%s: ", col6);
+				fflush (stdin);
+				gets   (item_2);
+				printf ("\n%s: ", col7);
+				scanf  ("%i", &visual);
+				printf ("\n%s: ", col8);
+				fflush (stdin);
+				gets   (item_3);
+				printf ("\n%s: ", col9);
+				scanf  ("%i", &digital);
+				printf ("\n%s: ", col10);
+				fflush (stdin);
+				gets   (item_4);
+				system ("cls");
+				fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
+				{printf ("Quais sao os itens da linha 3? \n");
+				printf ("\n%s: ", col1);
+				scanf  ("%i", &NroFrase);
+				printf ("\n%s: ", col2);
+				fflush (stdin);
+				gets   (frase); 
+				printf ("\n%s: ", col3);
+				scanf  ("%i", &cinestesico);
+				printf ("\n%s: ", col4);
+				fflush (stdin);
+				gets   (item_1);
+				printf ("\n%s: ", col5);
+				scanf  ("%i", &auditivo);
+				printf ("\n%s: ", col6);
+				fflush (stdin);
+				gets   (item_2);
+				printf ("\n%s: ", col7);
+				scanf  ("%i", &visual);
+				printf ("\n%s: ", col8);
+				fflush (stdin);
+				gets   (item_3);
+				printf ("\n%s: ", col9);
+				scanf  ("%i", &digital);
+				printf ("\n%s: ", col10);
+				fflush (stdin);
+				gets   (item_4);
+				system ("cls");
+				fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
+				{printf ("Quais sao os itens da linha 4? \n");
+				printf ("\n%s: ", col1);
+				scanf  ("%i", &NroFrase);
+				printf ("\n%s: ", col2);
+				fflush (stdin);
+				gets   (frase); 
+				printf ("\n%s: ", col3);
+				scanf  ("%i", &cinestesico);
+				printf ("\n%s: ", col4);
+				fflush (stdin);
+				gets   (item_1);
+				printf ("\n%s: ", col5);
+				scanf  ("%i", &auditivo);
+				printf ("\n%s: ", col6);
+				fflush (stdin);
+				gets   (item_2);
+				printf ("\n%s: ", col7);
+				scanf  ("%i", &visual);
+				printf ("\n%s: ", col8);
+				fflush (stdin);
+				gets   (item_3);
+				printf ("\n%s: ", col9);
+				scanf  ("%i", &digital);
+				printf ("\n%s: ", col10);
+				fflush (stdin);
+				gets   (item_4);
+				system ("cls");
+				fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
+				{printf ("Quais sao os itens da linha 5? \n");
+				printf ("\n%s: ", col1);
+				scanf  ("%i", &NroFrase);
+				printf ("\n%s: ", col2);
+				fflush (stdin);
+				gets   (frase); 
+				printf ("\n%s: ", col3);
+				scanf  ("%i", &cinestesico);
+				printf ("\n%s: ", col4);
+				fflush (stdin);
+				gets   (item_1);
+				printf ("\n%s: ", col5);
+				scanf  ("%i", &auditivo);
+				printf ("\n%s: ", col6);
+				fflush (stdin);
+				gets   (item_2);
+				printf ("\n%s: ", col7);
+				scanf  ("%i", &visual);
+				printf ("\n%s: ", col8);
+				fflush (stdin);
+				gets   (item_3);
+				printf ("\n%s: ", col9);
+				scanf  ("%i", &digital);
+				printf ("\n%s: ", col10);
+				fflush (stdin);
+				gets   (item_4);
+				system ("cls");
+				fprintf (ponteiro3, "%-9i%-50s%-12i%-63s%-9i%-53s%-7i%-57s%-8i%-68s\n", NroFrase, frase, cinestesico, item_1, auditivo, item_2, visual, item_3, digital, item_4);}
+				fclose (ponteiro3);
+				//criar a tabela e gerar o arquivo dat
+				//retornar ao menu
+				system ("pause");
 			}
 			else if (op == '2'){
 				system ("CLS");
@@ -233,72 +233,72 @@ if (strcmp(NOME,"MASTER") == 0)
 				}
 				fclose (file3);
 				system ("pause");
-				}
-				else if (op == '3'){
-					system ("CLS");
-					testeTotais (&TOTAU, &TOTDI, &TOTVI, &TOTCI);
-					system ("pause");
-					//colocar o resultado de tudo isso em um arquivo txt
-					//exibir tudo isso na tela
-					FILE *ponteiro;
-					sprintf (FileName, "Resultado_%s_%s.txt", NOME, PRONTUARIO); // transforma filename em um ponteiro que vale Resultado_Nome_Prontuario
-					ponteiro = fopen(FileName, "w+");
-					if (ponteiro == NULL){
+			}
+			else if (op == '3'){
+				system ("CLS");
+				testeTotais (&TOTAU, &TOTDI, &TOTVI, &TOTCI);
+				system ("pause");
+				//colocar o resultado de tudo isso em um arquivo txt
+				//exibir tudo isso na tela
+				FILE *ponteiro;
+				sprintf (FileName, "Resultado_%s_%s.txt", NOME, PRONTUARIO); // transforma filename em um ponteiro que vale Resultado_Nome_Prontuario
+				ponteiro = fopen(FileName, "w+");
+				if (ponteiro == NULL){
 					printf("Erro na abertura do arquivo");
 					return 1;
-					} else
+				} else
 					resultado (ponteiro, NOME, TOTVI, TOTAU, TOTCI, TOTDI);
 					fclose (ponteiro);
 					FILE *ponteiro1;
 					ponteiro1 = fopen (FileName, "r");
 					char B;
 					while ((B = fgetc (ponteiro)) != EOF)
-					putchar (B);
-					fclose (ponteiro1);			
-					system ("pause");
-					}
-					else if (op == '4'){
-					system ("CLS");	
-					char A;
-					FILE *arq;
-					arq = fopen ("REFERENCIAL_TEORICO.TXT", "r");
-					while ((A = fgetc (arq)) != EOF)
+						putchar (B);
+						fclose (ponteiro1);			
+						system ("pause");
+			}
+			else if (op == '4'){
+				system ("CLS");	
+				char A;
+				FILE *arq;
+				arq = fopen ("REFERENCIAL_TEORICO.TXT", "r");
+				while ((A = fgetc (arq)) != EOF)
 					putchar (A);	
 					fclose (arq);
 					system ("pause");
-					}
-					else if (op == 'F' || op == 'f'){
-					system ("CLS");
-					return 0;
-					}
-					else {
-					printf ("Erro ao escolher \n");
-					system ("pause");
-					}
-} while (op != 'F' && op != 'f');
-return 0;
+			}
+			else if (op == 'F' || op == 'f'){
+				system ("CLS");
+				return 0;
+			}
+			else {
+				printf ("Erro ao escolher \n");
+				system ("pause");
+			}
+		} while (op != 'F' && op != 'f');
+	return 0;
 	}
-else {
-	system ("CLS");
+	else {
+		system ("CLS");
 		testeTotais (&TOTAU, &TOTDI, &TOTVI, &TOTCI);
 		FILE *ponteiro2;
 		sprintf (FileName, "Resultado_%s_%s.txt", NOME, PRONTUARIO);
 		ponteiro2 = fopen(FileName, "w+");
 		if (ponteiro2 == NULL){
-		printf("Erro na abertura do arquivo");
-		return 1;
+			printf("Erro na abertura do arquivo");
+			return 1;
 		} else
-		resultado (ponteiro2, NOME, TOTVI, TOTAU, TOTCI, TOTDI);
-		fclose (ponteiro2);
-		FILE* ponteiro3;
-		ponteiro3 = fopen(FileName, "r");
-		char C;
-		while ((C = fgetc (ponteiro2)) != EOF)
-		putchar (C);
-		fclose (ponteiro3);
-		system ("pause");
-		exit (0);
-}
+			resultado (ponteiro2, NOME, TOTVI, TOTAU, TOTCI, TOTDI);
+			fclose (ponteiro2);
+			FILE* ponteiro3;
+			ponteiro3 = fopen(FileName, "r");
+			char C;
+			while ((C = fgetc (ponteiro2)) != EOF)
+			putchar (C);
+			fclose (ponteiro3);
+			system ("pause");
+			exit (0);
+	}
 }
 
 void resultado (FILE* ponteiro, char nome[], int TOTVI, int TOTAU, int TOTCI, int TOTDI){
