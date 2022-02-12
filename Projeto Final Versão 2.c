@@ -6,8 +6,7 @@
 void testeTotais (int* totAU, int* totDI, int* totVI, int* totCI);
 void resultado (FILE* ponteiro, char nome[], int TOTVI, int TOTAU, int TOTCI, int TOTDI);
 
-int main (void) 
-{ 
+int main (void) { 
 	int TOTVI, TOTDI, TOTAU, TOTCI;
 	int i, NroFrase, cinestesico, auditivo, visual, digital;
 	char NOME[100], PRONTUARIO[100], FileName[100], frase[100], item_1[100], item_2[100], item_3[100], item_4[100];
